@@ -2057,8 +2057,8 @@ footer {
   }
   
 
-/* Education & Activities Section - Clean and Responsive */
-.education-activities {
+/* Education & Experiences Section - Clean and Responsive */
+.education-experiences {
     background: var(--color-dark-mode);
     position: relative;
     padding: 60px 0;
@@ -2067,14 +2067,14 @@ footer {
     justify-content: center;
 }
 
-.education-activities-section {
+.education-experiences-section {
     width: 62%;
     max-width: 2000px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.education-activities-heading {
+.education-experiences-heading {
     width: 100%;
     display: flex;
     align-items: center;
@@ -2083,7 +2083,7 @@ footer {
     margin-top: 100px;
 }
 
-.education-activities .section-heading-article {
+.education-experiences .section-heading-article {
     font-size: 3rem;
     font-family: 'Fira Code', monospace;
     color: transparent;
@@ -2098,7 +2098,7 @@ footer {
     margin: 0;
 }
 
-.education-activities .sectionHeadingP {
+.education-experiences .sectionHeadingP {
     width: 300px;
     height: 1px;
     background-image: linear-gradient(
@@ -2108,7 +2108,7 @@ footer {
     );
 }
 
-/* Content Styling */
+/* Subtitles */
 .ea-subtitle {
     font-size: 2.2rem;
     font-family: 'Fira Code', monospace;
@@ -2116,21 +2116,28 @@ footer {
     margin: 40px 0 20px 0;
 }
 
+/* Education & Experience Cards */
+.education-item,
+.experience-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
 
-.education-item, 
-.activity-item {
     margin-bottom: 30px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 8px;
 }
 
+/* Text */
 .education-item p,
-.activity-item p {
+.experience-item p {
     font-size: 1.7rem;
     color: var(--color-ddd-color);
     line-height: 1.6;
-    margin-bottom: 8px;
+    margin: 0;
+    flex: 1;
 }
 
 /* Tags */
@@ -2145,10 +2152,10 @@ footer {
     font-size: 1.3rem;
 }
 
-/* QR Code */
+/* Image / QR */
 .ea-image {
-    margin: 25px 0;
-    text-align: left;
+    flex-shrink: 0;
+    margin: 0;
 }
 
 .ea-image img {
@@ -2160,58 +2167,70 @@ footer {
     background: white;
 }
 
-/* Responsive Adjustments */
+/* Hover */
+.ea-image a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.ea-image a:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
 @media screen and (max-width: 1200px) {
-    .education-activities-section {
+    .education-experiences-section {
         width: 80%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .education-activities-section {
+    .education-experiences-section {
         width: 85%;
     }
-    
-    .education-activities .section-heading-article {
+
+    .education-experiences .section-heading-article {
         font-size: 2.5rem;
     }
-    
-    .education-activities .sectionHeadingP {
+
+    .education-experiences .sectionHeadingP {
         width: 200px;
     }
-    
+
     .ea-subtitle {
         font-size: 2rem;
+    }
+
+    .education-item,
+    .experience-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ea-image {
+        margin-top: 15px;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .education-activities-section {
+    .education-experiences-section {
         width: 90%;
     }
-    
-    .education-activities .section-heading-article {
+
+    .education-experiences .section-heading-article {
         font-size: 2.2rem;
     }
-    
-    .education-activities .sectionHeadingP {
+
+    .education-experiences .sectionHeadingP {
         width: 150px;
     }
-    
+
     .ea-image img {
         width: 80px;
         height: 80px;
     }
 }
 
-.ea-image a {
-    display: inline-block;
-    transition: transform 0.3s ease;
-  }
-  
-  .ea-image a:hover {
-    transform: scale(1.05);
-  }
 
   /* Container for both buttons */
 .about-buttons-container {

@@ -2264,3 +2264,76 @@ footer {
       width: 100%;
     }
   }
+
+  /* ============================= */
+/* About Me – New Sub Section */
+/* ============================= */
+
+.about-sub-section {
+    max-width: 1100px;   /* SAME as other sections */
+    padding: 0 24px;     /* SAME side spacing */
+    margin: 60px auto 0; /* center + top spacing */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Image link wrapper */
+.about-sub-section a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Image itself */
+.about-sub-image {
+    width: 220px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Hover effect (subtle, matches site style) */
+.about-sub-section a:hover {
+    transform: scale(1.05);
+}
+
+/* Text under image */
+.about-sub-text {
+    margin-top: 18px;
+    font-size: 1.6rem;
+    font-family: 'Fira Code', monospace;
+    color: var(--color-light-purple);
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    max-width: 420px;
+}
+
+/* Light mode adjustment */
+.light-mode .about-sub-text {
+    color: var(--color-black);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .about-sub-image {
+        width: 180px;
+    }
+
+    .about-sub-text {
+        font-size: 1.5rem;
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .about-sub-image {
+        width: 160px;
+    }
+
+    .about-sub-text {
+        font-size: 1.4rem;
+    }
+}

@@ -2290,7 +2290,7 @@ footer {
 /* Image itself */
 .about-sub-image {
     width: 200px;
-    height: fit;
+    height: auto;
     border-radius: 12px;
     object-fit: cover;
 }

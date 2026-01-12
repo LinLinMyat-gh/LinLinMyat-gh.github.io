@@ -2289,8 +2289,8 @@ footer {
 
 /* Image itself */
 .about-sub-image {
-    width: 100px;
-    height: auto;
+    width: 50px;
+    height: 100px;
     border-radius: 12px;
     object-fit: cover;
 }

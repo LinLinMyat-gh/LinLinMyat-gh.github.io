@@ -2386,3 +2386,284 @@ footer {
     display: flex;
     align-items: center;
 }
+
+.project-box {
+
+    width: 100%;
+
+    height: auto;             /* Changed from 400px to auto for total flexibility */
+
+    min-height: 400px;        /* Optional: sets a consistent baseline height */
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: stretch;     /* Forces columns to stay equal height if using flex */
+
+    transition-duration: .3s;
+
+    border-radius: 30px;
+
+    border: 1px solid var(--tech-stack-box-border-color)
+
+}
+
+
+.image-div {
+
+    width: 50%;
+
+    align-self: center;     /* Keeps image anchored cleanly to the bottom */
+
+    display: center;
+
+    align-items: center;
+
+    padding-top: 70px;
+
+    padding-left: 10px;
+
+}
+
+
+.image-div img {
+
+    width: 100%;              /* Ensures content fills width proportionally */
+
+    height: auto;             /* Allows normal vertical scaling */
+
+    max-height: 100%;         /* Prevents overflow layout issues */
+
+    object-fit: cover;        /* Retains asset aspect ratio neatly */
+
+    border-top-left-radius: 0px;
+
+}
+
+
+.info-div {
+
+    width: 50%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 40px;           /* Updated to give secure top/bottom breathing room */
+
+}
+
+
+
+
+
+/* Container to line up the tags horizontally */
+.project-tools-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;            /* Gap between the pills */
+  margin-bottom: 16px; /* Space between tags and the title */
+}
+
+.project-tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;            
+    margin-bottom: -4px; /* Perfectly aligns spacing with your 20px info-div gaps */
+}
+
+.project-tag {
+    font-family: fira code, monospace; /* Matches your portfolio's font style */
+    font-size: 1.3rem;                /* Scales cleanly with your document settings */
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 4px;   
+    border: 1px solid;    
+    background-color: rgba(255, 255, 255, 0.03); 
+}
+
+
+
+
+
+/* --- TikTok & Extraction --- */
+.tag-tiktok {
+    color: #cbb368; 
+    border-color: #3d3a2b;
+}
+.tag-extraction {
+    color: #cbb368; 
+    border-color: #3d3a2b;
+}
+
+
+/* --- Excel & ETL Processing --- */
+.tag-excel {
+    color: #6a9fb5; 
+    border-color: #2d3c46;
+}
+.tag-etl {
+    color: #6a9fb5; 
+    border-color: #2d3c46;
+}
+
+/* --- Power BI, Modeling & Dashboards --- */
+.tag-powerbi {
+    color: #aa759f; 
+    border-color: #3b2a37;
+}
+.tag-daxmodeling {
+    color: #aa759f; 
+    border-color: #3b2a37;
+}
+.tag-dashboard {
+    color: #aa759f; 
+    border-color: #3b2a37;
+}
+
+.tag-collection {
+    color: #cbb368; 
+    border-color: #3d3a2b;
+}
+.tag-entry {
+    color: #6a9fb5; 
+    border-color: #2d3c46;
+}
+.tag-standardization {
+    color: #aa759f; 
+    border-color: #3b2a37;
+}
+.tag-query  {
+    color: #aa759f; 
+    border-color: #3b2a37;
+}
+.tag-modeling {
+    color: #cbb368; 
+    border-color: #3d3a2b;
+}
+
+/* Individual color schemes matching your original design specs */
+.tag-mysql {
+    color: #cbb368; 
+    border-color: #3d3a2b;
+}
+.tag-cleaning {
+    color: #6a9fb5; 
+    border-color: #2d3c46;
+}
+.tag-ddl {
+    color: #6a9fb5; 
+    border-color: #2d3c46;
+}
+.tag-dml {
+    color: #6a9fb5; 
+    border-color: #2d3c46;
+}
+.tag-rownumber {
+    color: #6a9fb5; 
+    border-color: #2d3c46;
+}
+.tag-selfjoin {
+    color: #6a9fb5; 
+    border-color: #2d3c46;
+}
+.tag-ctes1 {
+    color: #6a9fb5; 
+    border-color: #2d3c46;
+}
+.tag-eda {
+    color: #aa759f; 
+    border-color: #3b2a37;
+}
+.tag-aggregate {
+    color: #aa759f; 
+    border-color: #3b2a37;
+}
+.tag-denserank {
+    color: #aa759f; 
+    border-color: #3b2a37;
+}
+.tag-ctes2 {
+    color: #aa759f; 
+    border-color: #3b2a37;
+}
+.tag-dax {
+    color: #aa759f; 
+    border-color: #3b2a37;
+}
+.tag-tableau {
+    color: #aa759f; 
+    border-color: #3b2a37;
+}
+.tag-filter {
+    color: #aa759f; 
+    border-color: #3b2a37;
+}
+.tag-calculated {
+    color: #aa759f; 
+    border-color: #3b2a37;
+}
+.tag-sql {
+    color: #cbb368; 
+    border-color: #3d3a2b;
+}
+.tag-ctes3 {
+    color: #cbb368; 
+    border-color: #3d3a2b;
+}
+.tag-leftjoin {
+    color: #cbb368; 
+    border-color: #3d3a2b;
+}
+.tag-xlookup {
+    color: #cbb368; 
+    border-color: #3d3a2b;
+}
+.tag-if {
+    color: #cbb368; 
+    border-color: #3d3a2b;
+}
+.tag-indexmatch {
+    color: #cbb368; 
+    border-color: #3d3a2b;
+}
+.tag-nestedif {
+    color: #cbb368; 
+    border-color: #3d3a2b;
+}
+.tag-cognos {
+    color: #aa759f; 
+    border-color: #3b2a37;
+}
+.tag-html {
+    color: #cbb368; 
+    border-color: #3d3a2b;
+ }   
+.tag-css {
+    color: #cbb368; 
+    border-color: #3d3a2b;
+    }
+.tag-bootstrap{
+    color: #cbb368; 
+    border-color: #3d3a2b;
+}
+.tag-asp  {
+    color: #6a9fb5; 
+    border-color: #2d3c46;
+}
+
+.tag-sqlite {
+    color: #aa759f; 
+    border-color: #3b2a37;
+}

@@ -3026,3 +3026,47 @@ footer {
     .about-highlight { font-size: 2.0rem; }
     .about-body { font-size: 1.6rem; }
 }
+
+/* 1. This adds a gap ABOVE the entire name block */
+#name {
+    margin-top: 25px; 
+}
+
+/* 2. This controls the font style and size of the letters */
+#name p.jello.accent-italic {
+    font-family: "accent-italic" !important; 
+    font-style: italic; 
+    font-size: 12rem; 
+}
+
+/* 1. Makes the individual cards inside Education sit side-by-side */
+.education-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens if needed */
+    gap: 20px;       /* Adds spacing between the two horizontal tiles */
+    width: 100%;
+    margin-bottom: 40px; /* Adds space before the Experiences section starts */
+}
+
+/* 2. Makes the individual cards inside Experiences sit side-by-side */
+.experiences-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;       /* Adds spacing between the two horizontal tiles */
+    width: 100%;
+}
+
+/* 3. Ensures the full-width headings stay on their own line at the top of each section */
+.ea-subtitle {
+    width: 100%;
+}
+
+/* 4. Forces each item tile to take up roughly half the width so they align perfectly side-by-side */
+.education-item,
+.experience-item {
+    flex: 1 1 calc(50% - 10px); 
+    min-width: 280px;           /* Prevents cards from getting too squished on smaller screens */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

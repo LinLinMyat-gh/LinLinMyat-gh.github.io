@@ -3605,3 +3605,159 @@ footer {
   margin-bottom: 30px;      /* Clear breathing space before the tool tags container */
 }
 
+/* ==========================================================================
+   2-COLUMN PROJECT GRID GEOMETRY (FORCED 2 BOXES PER ROW)
+   ========================================================================== */
+
+.project-grid-layout {
+  display: grid;
+  /* Explicitly forces exactly 2 equal-width columns per row */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 45px;          /* Generous, high-end display separation */
+  margin-bottom: 90px; /* Strong vertical section spacing */
+}
+
+/* Base card layout mechanics */
+.project-card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card framing matches portfolio dark colors */
+.project-card-body {
+  background-color: #161622; 
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px; 
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle lift effect on hover to match active section cards */
+.project-card-body:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Background indexing digits */
+.card-number-bg {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  line-height: 1;
+  pointer-events: none;
+  font-family: serif;
+}
+
+/* Expanded image containment rules to match the massive cards */
+.card-image-wrapper {
+  width: 100%;
+  height: 280px; /* Increased height to balance the wider aspect ratio */
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Dynamic zoom scaling active on card hover */
+.project-card-body:hover .card-image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Roomy text block layout mapping */
+.card-info-content {
+  padding: 40px; /* Expanded padding for clean layout breathing room */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Balanced project heading font size */
+.card-info-content .ProjectHeading {
+  font-size: 1.35rem; 
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   TARGETED BIGGER FONT: PROJECT DESCRIPTION ONLY
+   ========================================================================== */
+.card-info-content .ProjectDescription {
+  font-size: 1.2rem; /* Noticeably bigger and highly readable font size */
+  color: rgba(255, 255, 255, 0.85); /* Slightly brighter contrast for better readability */
+  line-height: 1.75;
+  margin-bottom: 30px;
+  width: 100%;              /* Forces the text to expand across the spacious column */
+}
+
+/* Roomier bottom action element spacing */
+.card-footer-actions {
+  padding: 25px 40px; /* Perfectly aligned padding with the text box above */
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.card-action-link {
+  color: #ffe699; /* Maintain gold accent color style rules */
+  text-decoration: none;
+  font-size: 0.85rem; 
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  display: inline-block;
+}
+
+/* Link slide-out animation on card hover */
+.project-card-body:hover .card-action-link {
+  color: #ffffff;
+  padding-left: 6px;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* Drop from 2 columns down to 1 column on smaller tablets and mobile devices */
+@media (max-width: 992px) {
+  .project-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .card-info-content {
+    padding: 30px;
+  }
+  .card-info-content .ProjectDescription {
+    font-size: 1.1rem; /* Marginally scaled down for tablet/mobile views */
+  }
+  .card-footer-actions {
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-grid-layout {
+    gap: 20px;
+  }
+  .card-info-content {
+    padding: 25px;
+  }
+  .card-info-content .ProjectDescription {
+    font-size: 1.05rem; /* Mobile optimization */
+  }
+  .card-footer-actions {
+    padding: 15px 25px;
+  }
+}

@@ -3960,5 +3960,135 @@ footer {
     padding: 15px 25px;
   }
 }
+/* ==========================================================================
+   COMPLETE RESPONSIVE OVERRIDES FOR ALL MOBILE & TABLET DEVICES
+   ========================================================================== */
 
+/* 1. Tablet and Small Desktop Adjustments */
+@media screen and (max-width: 1024px) {
+    .about-section, 
+    .projects-section-div, 
+    .skills-section {
+        width: 90% !important; /* Open up section margins for breathing room */
+    }
+    
+    .text-content {
+        width: 85%;
+    }
+}
+
+/* 2. Horizontal-to-Vertical Stack Breakpoint (Phones & Vertical Tablets) */
+@media screen and (max-width: 768px) {
+    /* Landings page text reset */
+    .landing-page-container {
+        height: auto;
+        min-height: calc(100vh - 115px);
+        flex-direction: column !important; /* Stack intro details text vertically */
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .text-content {
+        width: 100%;
+        align-items: center; /* Center everything gracefully on mobile screens */
+        text-align: center;
+    }
+
+    #hello-friend, #name, #work {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #name, #work {
+        font-size: 4.2rem !important; /* Prevent massive text headers from wrapping awkwardly */
+    }
+
+    #info-para {
+        width: 100%;
+        font-size: 1.8rem;
+    }
+
+    .contact-btn-div {
+        justify-content: center; /* Center buttons horizontally */
+    }
+
+    /* About Section & Profile Photo Realignment */
+    .info-dp-section {
+        flex-direction: column-reverse !important; /* Stack text below profile card */
+        align-items: center;
+        gap: 40px;
+    }
+
+    .about-info, .dp {
+        width: 100% !important;
+    }
+
+    .about-info p {
+        text-align: center;
+    }
+
+    /* Project Cards Transformation (Prevents Text Truncation) */
+    .project-box {
+        height: auto !important; /* Let height calculate naturally based on content length */
+        flex-direction: column !important; /* Turn landscape layout split into portrait */
+        overflow: hidden;
+    }
+
+    .info-div, .image-div {
+        width: 100% !important; /* Make sections full container size */
+    }
+
+    .info-div {
+        padding: 30px 20px !important;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-buttons {
+        justify-content: center;
+    }
+
+    .image-div {
+        padding: 0;
+        height: 250px; /* Constrain display height on phone layouts */
+    }
+
+    .image-div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Crop beautifully inside the preview container boundaries */
+        border-radius: 0 0 30px 30px !important; /* Snap edges flawlessly to outer card */
+    }
+
+    /* Tech Stack Grid Optimization */
+    .tech-stack-wrapper {
+        gap: 20px !important; /* Bring components tighter together */
+    }
+
+    .tech-stack-box {
+        width: 130px !important; /* Scale down tech boxes for 2-column or 3-column wrap rows */
+        height: 130px !important;
+        border-radius: 20px;
+    }
+}
+
+/* 3. Ultra-Small Screen Optimizations (Compact Smartphone Devices) */
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 50%; /* Uniformly scale base REM calculations down safely */
+    }
+
+    #name, #work {
+        font-size: 3.5rem !important;
+    }
+
+    .project-boxes-div {
+        padding: 15px !important; /* Tighten gaps near outside viewport edges */
+    }
+    
+    .data-analyst-heading {
+        font-size: 2.2rem !important;
+        letter-spacing: 2px;
+    }
+}
 

@@ -578,6 +578,7 @@ noscript {
 
 .text-content {
     display: flex;
+    font-size: 4rem;
     flex-direction: column;
     width: 60%;
     height: 100%;
@@ -595,7 +596,7 @@ noscript {
 
 #name,
 #work {
-    font-size: 8rem;
+    font-size: 6rem;
     width: fit-content
 }
 

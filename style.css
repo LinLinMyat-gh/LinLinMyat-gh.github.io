@@ -3769,3 +3769,48 @@ footer {
     padding: 15px 25px;
   }
 }
+
+.light-mode .project-card-body {
+  /* Transition card from deep space to a sophisticated linen white tone */
+  background-color: #f7f4f0; 
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.light-mode .project-card-body:hover {
+  /* Upscale card elevation shadow layer styling for bright UI frames */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.07);
+}
+
+/* Bright mode background index markers layout */
+.light-mode .card-number-bg {
+  color: rgba(0, 0, 0, 0.03);
+}
+
+/* Image bounding border adjustments */
+.light-mode .card-image-wrapper {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* Typographic mapping assignments */
+.light-mode .card-info-content .ProjectHeading {
+  color: #11111b; /* Matches your --color-dark-mode hex value */
+}
+
+.light-mode .card-info-content .ProjectDescription {
+  color: #504f54; /* Clean mid-contrast slate text for pristine ambient view reading */
+}
+
+/* Action button area panel updates */
+.light-mode .card-footer-actions {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.light-mode .card-action-link {
+  color: #8000ff; /* Automatically transitions from gold accent to your root brand purple */
+}
+
+.light-mode .project-card-body:hover .card-action-link {
+  color: #000000; /* Snaps to crisp absolute dark on mouse hover conditions */
+}

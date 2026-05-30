@@ -1818,7 +1818,8 @@ footer {
 
     .text-content {
         padding-left: 0;
-        width: 80%
+        width: 80%;
+        font-size: 3rem
     }
 
     #hello-friend {
@@ -1828,7 +1829,7 @@ footer {
 
     #name,
     #work {
-        font-size: 5.5rem
+        font-size: 4rem
     }
 
     #info-para,

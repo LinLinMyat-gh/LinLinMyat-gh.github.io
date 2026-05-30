@@ -3061,13 +3061,13 @@ footer {
 #name p.jello.accent-italic {
     font-family: "accent-italic" !important; 
     font-style: italic; 
-    font-size: 10rem; 
-}
-#work p.jello { 
     font-size: 6rem; 
 }
+#work p.jello { 
+    font-size: 4rem; 
+}
 #text-content p.jello { 
-    font-size: 3rem; 
+    font-size: 2rem; 
 }
 
 /* 1. Makes the individual cards inside Education sit side-by-side */

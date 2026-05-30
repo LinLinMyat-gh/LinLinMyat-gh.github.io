@@ -3770,3 +3770,56 @@ footer {
   }
 }
 
+/* ==========================================================================
+   THEME REFINEMENT: PROJECT CARD CONTRAST FIXES
+   ========================================================================== */
+
+/* --- 1. DEFAULT (DARK MODE) STATUS --- */
+.project-box {
+    /* Your original background gradient - adapts automatically */
+    background-image: linear-gradient(to bottom right, var(--tech-stack-box-first-color), var(--tech-stack-box-second-color));
+    border: 1px solid var(--tech-stack-box-border-color);
+}
+
+.project-box .ProjectHeading {
+    color: var(--color-white); /* Stays crisp white in dark mode */
+}
+
+.project-box .ProjectDescription {
+    color: #a0a0a9; /* Soft gray for clean readability over dark backgrounds */
+    transition: color 0.3s ease;
+}
+
+/* Brightens your custom GitHub SVG redirect icons over dark values */
+.project-box .github-redirect img {
+    filter: brightness(2);
+    transition: filter 0.3s ease;
+}
+.project-box .github-redirect:hover img {
+    filter: brightness(4);
+}
+
+
+/* --- 2. LIGHT MODE OVERRIDES --- */
+/* This hooks directly into your toggle class to flip internal text colors */
+.light-mode .project-box .ProjectHeading {
+    color: #11111b; /* Swaps title to your dark mode charcoal color for heavy contrast */
+}
+
+.light-mode .project-box .ProjectDescription {
+    color: #4b4b53; /* Deepens description gray so it doesn't wash out on light sand cards */
+}
+
+/* Adjusts the GitHub redirect icon visibility so it's readable on a light card */
+.light-mode .project-box .github-redirect img {
+    filter: brightness(0.2); /* Darkens the white icon asset to dark charcoal/black */
+}
+.light-mode .project-box .github-redirect:hover img {
+    filter: brightness(0);
+}
+
+/* Subtle border adaptation for the image card block in light mode */
+.light-mode .project-box .image-div {
+    border-bottom: 1px solid var(--tech-stack-box-border-color);
+}
+

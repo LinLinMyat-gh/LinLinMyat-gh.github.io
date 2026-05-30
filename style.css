@@ -3064,10 +3064,10 @@ footer {
     font-size: 10rem; 
 }
 #work p.jello { 
-    font-size: 8rem; 
+    font-size: 6rem; 
 }
 #text-content p.jello { 
-    font-size: 6rem; 
+    font-size: 3rem; 
 }
 
 /* 1. Makes the individual cards inside Education sit side-by-side */
@@ -3719,7 +3719,7 @@ footer {
 }
 
 .card-action-link {
-  color: #ffe699; /* Maintain gold accent color style rules */
+  color: #ea07f6; /* Maintain gold accent color style rules */
   text-decoration: none;
   font-size: 0.85rem; 
   font-weight: 600;
@@ -3771,55 +3771,194 @@ footer {
 }
 
 /* ==========================================================================
-   THEME REFINEMENT: PROJECT CARD CONTRAST FIXES
+   THEME VARIABLES (DARK MODE BY DEFAULT)
    ========================================================================== */
-
-/* --- 1. DEFAULT (DARK MODE) STATUS --- */
-.project-box {
-    /* Your original background gradient - adapts automatically */
-    background-image: linear-gradient(to bottom right, var(--tech-stack-box-first-color), var(--tech-stack-box-second-color));
-    border: 1px solid var(--tech-stack-box-border-color);
+:root {
+  --project-card-bg: #161622;
+  --project-card-border: rgba(238, 10, 231, 0.08);
+  --project-card-border-inner: rgba(255, 255, 255, 0.05);
+  --project-card-shadow: rgba(0, 0, 0, 0.4);
+  
+  --project-text-heading: #ffffff;
+  --project-text-body: rgba(255, 255, 255, 0.85);
+  --project-text-number: rgba(255, 255, 255, 0.03);
+  
+  --project-footer-bg: rgba(0, 0, 0, 0.15);
+  --project-accent-color: #f700ff; /* Gold accent link */
+  --project-accent-hover: #ffffff;
 }
 
-.project-box .ProjectHeading {
-    color: var(--color-white); /* Stays crisp white in dark mode */
+/* ==========================================================================
+   THEME VARIABLES (LIGHT MODE OVERRIDES)
+   ========================================================================== */
+.light-mode {
+  --project-card-bg: #f7f5f0;       /* Soft light background, not blinding white */
+  --project-card-border: rgba(0, 0, 0, 0.08);
+  --project-card-border-inner: rgba(0, 0, 0, 0.05);
+  --project-card-shadow: rgba(0, 0, 0, 0.08);
+  
+  --project-text-heading: #11111b;  /* Crisp dark charcoal for headings */
+  --project-text-body: #4b4b53;     /* Highly readable deep gray for text */
+  --project-text-number: rgba(0, 0, 0, 0.03);
+  
+  --project-footer-bg: rgba(0, 0, 0, 0.03);
+  --project-accent-color: #cc00ff; /* Purple accent link for light mode */
+  --project-accent-hover: #11111b;
 }
 
-.project-box .ProjectDescription {
-    color: #a0a0a9; /* Soft gray for clean readability over dark backgrounds */
-    transition: color 0.3s ease;
+/* ==========================================================================
+   2-COLUMN PROJECT GRID GEOMETRY (FORCED 2 BOXES PER ROW)
+   ========================================================================== */
+.project-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 45px; 
+  margin-bottom: 90px; 
 }
 
-/* Brightens your custom GitHub SVG redirect icons over dark values */
-.project-box .github-redirect img {
-    filter: brightness(2);
-    transition: filter 0.3s ease;
-}
-.project-box .github-redirect:hover img {
-    filter: brightness(4);
+/* Base card layout mechanics */
+.project-card-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
-
-/* --- 2. LIGHT MODE OVERRIDES --- */
-/* This hooks directly into your toggle class to flip internal text colors */
-.light-mode .project-box .ProjectHeading {
-    color: #11111b; /* Swaps title to your dark mode charcoal color for heavy contrast */
+/* Card framing styles utilizing dynamic variables */
+.project-card-body {
+  background-color: var(--project-card-bg); 
+  border: 1px solid var(--project-card-border);
+  border-radius: 16px; 
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.light-mode .project-box .ProjectDescription {
-    color: #4b4b53; /* Deepens description gray so it doesn't wash out on light sand cards */
+/* Lift and dynamic shadow effect on hover */
+.project-card-body:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px var(--project-card-shadow);
 }
 
-/* Adjusts the GitHub redirect icon visibility so it's readable on a light card */
-.light-mode .project-box .github-redirect img {
-    filter: brightness(0.2); /* Darkens the white icon asset to dark charcoal/black */
-}
-.light-mode .project-box .github-redirect:hover img {
-    filter: brightness(0);
+/* Background indexing digits */
+.card-number-bg {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: var(--project-text-number);
+  line-height: 1;
+  pointer-events: none;
+  font-family: serif;
+  transition: color 0.3s ease;
 }
 
-/* Subtle border adaptation for the image card block in light mode */
-.light-mode .project-box .image-div {
-    border-bottom: 1px solid var(--tech-stack-box-border-color);
+/* Expanded image containment rules */
+.card-image-wrapper {
+  width: 100%;
+  height: 280px; 
+  overflow: hidden;
+  border-bottom: 1px solid var(--project-card-border-inner);
 }
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Dynamic zoom scaling active on card hover */
+.project-card-body:hover .card-image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Roomy text block layout mapping */
+.card-info-content {
+  padding: 40px; 
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Balanced project heading styles */
+.card-info-content .ProjectHeading {
+  font-size: 1.35rem; 
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.4;
+  color: var(--project-text-heading);
+  transition: color 0.3s ease;
+}
+
+/* Targeted larger text font size layout */
+.card-info-content .ProjectDescription {
+  font-size: 1.2rem; 
+  color: var(--project-text-body); 
+  line-height: 1.75;
+  margin-bottom: 30px;
+  width: 100%; 
+  transition: color 0.3s ease;
+}
+
+/* Bottom action element spacing */
+.card-footer-actions {
+  padding: 25px 40px; 
+  border-top: 1px solid var(--project-card-border-inner);
+  background-color: var(--project-footer-bg);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card-action-link {
+  color: var(--project-accent-color); 
+  text-decoration: none;
+  font-size: 0.85rem; 
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  display: inline-block;
+}
+
+/* Link slide-out animation on card hover */
+.project-card-body:hover .card-action-link {
+  color: var(--project-accent-hover);
+  padding-left: 6px;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 992px) {
+  .project-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .card-info-content {
+    padding: 30px;
+  }
+  .card-info-content .ProjectDescription {
+    font-size: 1.1rem; 
+  }
+  .card-footer-actions {
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-grid-layout {
+    gap: 20px;
+  }
+  .card-info-content {
+    padding: 25px;
+  }
+  .card-info-content .ProjectDescription {
+    font-size: 1.05rem; 
+  }
+  .card-footer-actions {
+    padding: 15px 25px;
+  }
+}
+
 

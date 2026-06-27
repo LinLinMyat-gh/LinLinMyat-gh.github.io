@@ -55,7 +55,7 @@
       <div class="hey">Hey!</div>
       <div class="logo" tabindex="0" aria-label="lin lin myat logo">
         <div class="logo-top">
-          <img src="src/png/nav-avatar.png" alt="animation-head" id="nav-avatar"/>
+          <span class="logo-text">LLM</span>
         </div>
       </div>
       <div class="navbar-tabs" id="navbar-tabs">
@@ -146,60 +146,34 @@
 <section class="landing-page-container" id="home">
   <div class="blob"></div>
 
-  <div class="top-metadata-tag" data-aos="fade-down" data-aos-delay="0" style="position: absolute; top: 20px; left: 20px; font-family: monospace; font-size: 1rem; color: #ff08e2; letter-spacing: 2px;">
-     BANGKOK, THAILAND &nbsp; • &nbsp; DATA ANALYTICS
+  <div class="top-metadata-tag" data-aos="fade-down" data-aos-delay="0">
+    BANGKOK, THAILAND &nbsp; • &nbsp; DATA ANALYTICS
   </div>
 
-
   <div class="text-content">
-    <article id="hello-friend" data-aos="fade-up" data-aos-delay="0">
-      <p class="jello">H</p>
-      <p class="jello">e</p>
-      <p class="jello">l</p>
-      <p class="jello">l</p>
-      <p class="jello">o</p>
-      <p class="jello">.</p>
-      <p class="jello">I</p>
-      <p class="jello">'</p>
-      <p class="jello">m</p>
-    </article>
-    
     <article id="name" data-aos="fade-up" data-aos-delay="200">
-      <p class="jello accent-italic">L</p>
-      <p class="jello accent-italic">i</p>
-      <p class="jello accent-italic">n</p>
+      <p class="jello accent-italic">L</p><p class="jello accent-italic">i</p><p class="jello accent-italic">n</p>
       &nbsp;
-      <p class="jello accent-italic">L</p>
-      <p class="jello accent-italic">i</p>
-      <p class="jello accent-italic">n</p>
+      <p class="jello accent-italic">L</p><p class="jello accent-italic">i</p><p class="jello accent-italic">n</p>
       &nbsp;
-      <p class="jello accent-italic">M</p>
-      <p class="jello accent-italic">y</p>
-      <p class="jello accent-italic">a</p>
-      <p class="jello accent-italic">t</p>
-      <p class="jello accent-italic">.</p>
+      <p class="jello accent-italic">M</p><p class="jello accent-italic">y</p><p class="jello accent-italic">a</p><p class="jello accent-italic">t</p><p class="jello accent-italic">.</p>
     </article>
 
     <article id="work" data-aos="fade-up" data-aos-delay="400">
       <div>
-        <p class="jello">D</p>
-        <p class="jello">a</p>
-        <p class="jello">t</p>
-        <p class="jello">a</p>
+        <p class="jello">D</p><p class="jello">a</p><p class="jello">t</p><p class="jello">a</p>
       </div>
       <div>
-        <p class="jello">A</p>
-        <p class="jello">n</p>
-        <p class="jello">a</p>
-        <p class="jello">l</p>
-        <p class="jello">y</p>
-        <p class="jello">s</p>
-        <p class="jello">t</p>
+        <p class="jello">A</p><p class="jello">n</p><p class="jello">a</p><p class="jello">l</p><p class="jello">y</p><p class="jello">s</p><p class="jello">t</p>
       </div>
     </article>
+    <!-- Description Text -->
+    <p class="hero-description" data-aos="fade-up" data-aos-delay="600">
+      I work on raw data to bring actionable insights through data analysis, visualization and dashboard development. 
+    </p>
+    
     
     <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
-      
       <div class="main-action-buttons">
         <a href="#projects" tabindex="-1">
           <button class="letsTalkBtn">
@@ -218,25 +192,48 @@
 
       <div class="setting-container" id="setting-container">
         <input type="checkbox" id="switchforsetting" onclick="settingtoggle()" />
-
-        <label for="switchforsetting" class="needtobeinvert" id="labelforsetting" tabindex="0"
-          aria-label="settings for sound and appearance"></label>
+        <label for="switchforsetting" class="needtobeinvert" id="labelforsetting" tabindex="0" aria-label="settings for sound and appearance"></label>
 
         <div class="visualmodetogglebuttoncontainer" id="visualmodetogglebuttoncontainer">
           <input type="checkbox" id="switchforvisualmode" onclick="visualmode()" />
-          <label for="switchforvisualmode" id="labelforvisualmode" tabindex="0"
-            aria-label="switch appearance"></label>
+          <label for="switchforvisualmode" id="labelforvisualmode" tabindex="0" aria-label="switch appearance"></label>
         </div>
 
         <div class="soundtogglebuttoncontainer" id="soundtogglebuttoncontainer">
           <input type="checkbox" id="switchforsound" onclick="playpause()" />
-          <label for="switchforsound" id="labelforsound" tabindex="0" aria-label="switch sound"
-            class="needtobeinvert"></label>
+          <label for="switchforsound" id="labelforsound" tabindex="0" aria-label="switch sound" class="needtobeinvert"></label>
         </div>
+        
       </div>
+    </div>
 
+    <!-- Statistics Section -->
+    <div class="stats-container" data-aos="fade-up" data-aos-delay="600">
+      <div class="stat-item">
+        <span class="stat-number" data-count="11">0</span>
+        <span class="stat-label">Data Analytics Projects</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="1">0</span>
+        <span class="stat-label">Data Internships</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="1">0</span>
+        <span class="stat-label">Data Volunteer Experiences</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="8">0</span>
+        <span class="stat-label">Dashboards Built</span>
+      </div>
     </div>
   </div>
+
+  <!-- Premium High-End Downward Arrow -->
+  <a href="#projects" class="scroll-down-arrow" aria-label="Scroll down">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
 </section>
     <!-- landing page ends here -->
     <section class="about-section-container" id="about" data-aos="fade-up">
@@ -500,7 +497,7 @@
     <div class="project-boxes-div">
 
       <!-- ================= 1. OTHER PROJECTS SECTION ================= -->
-      <h3 class="project-subheading">Other Projects</h3>
+      <h3 class="project-subheading">Learning Projects</h3>
       
       <div class="project-grid-layout">
 
